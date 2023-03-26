@@ -1,53 +1,52 @@
 import { ImageList, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import  CreateAccountImg from "../Assets/CreateAccountImg.svg";
+import CreateAccountImg from "../Assets/CreateAccountImg.svg";
 import { styled } from "@mui/system";
 
-const HomePageSectionShow = ({sectionDirection}) => {
+const HomePageSectionShow = ({ sectionDirection, sectionHeading, sectionSubHeading, sectionDescription }) => {
   const OuterContainer = styled(Box)({
     display: "flex",
-    flexDirection:(`${sectionDirection}`),
+    flexDirection: `${sectionDirection}`,
     justifyContent: "space-around",
     alignItems: "center",
-    flexWrap:"wrap",
-    padding: "0 10%"
+    flexWrap: "wrap",
+    padding: "0 10%",
   });
-  console.log(sectionDirection);
+
+  const ImageListContainer = styled(ImageList)({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    minWidth: "302px",
+    minHeight: "525px",
+  });
+
+  const SectionTextArea = styled(Box)({
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "column",
+    alignItems: "start",
+    gap: "1.1rem",
+    justifyContent: "center",
+    maxWidth: "561px",
+  });
   return (
     <>
       <OuterContainer>
-        <ImageList
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            minWidth:"302px",
-            minHeight:"525px"
-          }}
-        >
-          <img src={`${CreateAccountImg}`} alt="device" width="100%" height="100%" />
-        </ImageList>
+        <ImageListContainer>
+          <img src={`${CreateAccountImg}`} alt="device" />
+        </ImageListContainer>
 
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap:"wrap",
-            flexDirection: "column",
-            alignItems:"start",
-            gap: "1.1rem",
-            justifyContent: "center",
-            maxWidth:"561px"
-          }}
-        >
-          <Typography variant="h3">Create an account</Typography>
+        <SectionTextArea>
+          <Typography variant="h3">{sectionHeading}</Typography>
           <Typography variant="h2">
-            Create/login to an existing account to get started
+            {sectionSubHeading}
           </Typography>
           <Typography variant="h4" sx={{ marginTop: "1rem" }}>
-            An account is created with your email and a desired password
+            {sectionDescription}
           </Typography>
-        </Box>
+        </SectionTextArea>
       </OuterContainer>
     </>
   );

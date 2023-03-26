@@ -59,7 +59,7 @@ const CustomTheme=createTheme({
         fontFamily: "Poppins",
         fontStyle:'normal',
         fontWeight: 700,
-        fontSize: 64,
+        fontSize: 66,
         textAlign: 'center',
         lineHeight: 1.5,
         letterSpacing: 1.4
