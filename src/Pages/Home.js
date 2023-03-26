@@ -10,7 +10,9 @@ const Home = () => {
       <Layout>
         <HeroSection />
         <HomePageSectionShow />
-        <DownloadAppSection />
+        <HomePageSectionShow sectionDirection={"row"}/>
+        <HomePageSectionShow sectionDirection={"row-reverse"}/>
+        <DownloadAppSection sectionDirection={"row"}/>
       </Layout>
     </>
   );

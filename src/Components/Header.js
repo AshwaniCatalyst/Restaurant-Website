@@ -7,11 +7,12 @@ import {
   IconButton,
   ImageList,
   Toolbar,
+  // Typography,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../Assets/navLogo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
-import HeaderCss from "../Styles/Header.module.css";
+import HeaderCss from "../Styles/HomePage.module.css";
 
 const Header = () => {
   const Pages = ["Home", "Product", "Faq", "Contact"];
@@ -25,8 +26,8 @@ const Header = () => {
       className={`${HeaderCss.flex} ${HeaderCss.navDrawer}`}
     >
       {Pages.map((page) => (
-        <Button key={page} sx={{}}>
-          <Link to={`/${page}`}>{page}</Link>
+        <Button key={page} className="active">
+          <NavLink to={`/${page}`}>{page}</NavLink>
         </Button>
       ))}
     </Box>
@@ -50,7 +51,16 @@ const Header = () => {
                   key={page}
                   sx={{ display: { xs: "none", sm: "none", md: "block" } }}
                 >
-                  <Link to={`/${page}`}>{page}</Link>
+                  <ul>
+                  <NavLink
+                    to={`/${page}`}
+                  >
+                    <li className={`${HeaderCss.navLinkPage}`}>
+                    {/* <Typography variant="navLinks">{page}</Typography>  */}
+                    {page}
+                    </li>
+                  </NavLink>
+                  </ul>
                 </Button>
               ))}
             </Box>

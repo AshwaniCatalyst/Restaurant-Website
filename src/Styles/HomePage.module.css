@@ -1,3 +1,4 @@
+
 .flex {
   display: flex;
   align-items: center;
@@ -22,7 +23,16 @@
 .navLinks {
   width: 40%;
   justify-content: space-between;
-  color: #252b42;
+}
+
+.navLinkPage{
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-Weight: 600;
+    font-Size: 16;
+    letter-Spacing: 0.2;
+  
 }
 
 .navDrawer {
@@ -42,7 +52,6 @@
 .heroSection {
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
   min-height: 70vh;
   text-align: center;
   z-index: 2;

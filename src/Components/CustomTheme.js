@@ -13,13 +13,7 @@ const CustomTheme=createTheme({
     },
     typography:{
         h1 : {
-        fontFamily: "Poppins",
-        fontStyle:'normal',
-        fontWeight: 700,
-        fontSize: 64,
-        textAlign: 'center',
-        lineHeight: 1.5,
-        letterSpacing: 1.4
+        
        },
     h2 : {
         fontFamily: 'Montserrat',
@@ -60,6 +54,30 @@ const CustomTheme=createTheme({
         fontSize: 12,
         letterSpacing: 0.1,
         color:'#5c5c5c'
+       },
+       subtitle1:{
+        fontFamily: "Poppins",
+        fontStyle:'normal',
+        fontWeight: 700,
+        fontSize: 64,
+        textAlign: 'center',
+        lineHeight: 1.5,
+        letterSpacing: 1.4
+       },
+       navLinks :{
+        fontFamily: 'Montserrat',
+        fontStyle:"normal",
+        fontWeight: 600,
+        fontSize: 16,
+        letterSpacing: 0.2,
+        color:'#252B42'
+       },
+       button:{
+        fontFamily:"Montserrat",
+        fontWeight:"600",
+        fontSize:"16",
+        color:"#252B42",
+        textTransform:"capitalize"
        }
     }
     

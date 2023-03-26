@@ -1,37 +1,43 @@
 import { ImageList, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import CreateAccountImg from "../Assets/CreateAccountImg.svg";
+import  CreateAccountImg from "../Assets/CreateAccountImg.svg";
+import { styled } from "@mui/system";
 
-const HomePageSectionShow = ({ item1, item2 }) => {
+const HomePageSectionShow = ({sectionDirection}) => {
+  const OuterContainer = styled(Box)({
+    display: "flex",
+    flexDirection:(`${sectionDirection}`),
+    justifyContent: "space-around",
+    alignItems: "center",
+    flexWrap:"wrap",
+    padding: "0 10%"
+  });
+  console.log(sectionDirection);
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row-reverse",
-          justifyContent: "space-around",
-          alignItems: "center",
-          padding: "30px 250px"
-        }}
-      >
+      <OuterContainer>
         <ImageList
           sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "flex-start",
+            minWidth:"302px",
+            minHeight:"525px"
           }}
         >
-          <img src={`${CreateAccountImg}`} alt="device" />
+          <img src={`${CreateAccountImg}`} alt="device" width="100%" height="100%" />
         </ImageList>
 
         <Box
           sx={{
-            wordBreak: "break-word",
             display: "flex",
+            flexWrap:"wrap",
             flexDirection: "column",
+            alignItems:"start",
             gap: "1.1rem",
             justifyContent: "center",
+            maxWidth:"561px"
           }}
         >
           <Typography variant="h3">Create an account</Typography>
@@ -42,7 +48,7 @@ const HomePageSectionShow = ({ item1, item2 }) => {
             An account is created with your email and a desired password
           </Typography>
         </Box>
-      </Box>
+      </OuterContainer>
     </>
   );
 };

@@ -10,18 +10,16 @@ const Footer = () => {
     <>
       <Box
         sx={{
-          textAlign: "center",
-
-          flexWrap: "wrap",
           padding: "68px 170px",
         }}
       >
         <Box
           sx={{
-            width: "100%",
             display: "flex",
             alignItems: "center",
+            flexWrap: "wrap",
             justifyContent: "space-between",
+            gap:"2rem"
           }}
         >
           <Box
@@ -31,6 +29,7 @@ const Footer = () => {
                 sm: "none",
                 md: "block",
                 width: "246px",
+                
               },
             }}
           >
@@ -41,21 +40,29 @@ const Footer = () => {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "centre",
-              gap: "1rem",
+              alignItems:"center",
+              justifyContent: "space-around",
+              gap: "2.2rem",
             }}
           >
-            <ImageList>
+            <ImageList sx={{
+              display: "inherit"
+            }}>
               <img src={`${TwitterIcon}`} alt="twitter" />
             </ImageList>
-            <ImageList>
+            <ImageList sx={{
+              display: "inherit"
+              }}>
               <img src={`${FBicon}`} alt="Facebook" />
             </ImageList>
-            <ImageList>
+            <ImageList sx={{
+              display: "inherit"
+            }}>
               <img src={`${InstgramIcon}`} alt="Instagram" />
             </ImageList>
           </Box>
-          <Box sx={{}}>
+          <Box sx={{
+             }}>
             <Typography variant="h6">
               Copywright 2020 Bella Onojie.com
             </Typography>

@@ -1,10 +1,8 @@
 import { Box } from "@mui/system";
 import React from "react";
-// import HeroBanner from "../Assets/HeroBanner.svg";
 import { Typography } from "@mui/material";
 import HomePageButtons from "../Components/HomePageButtons";
-import HeroSectionCss from "../Styles/Header.module.css";
-// import DeviceImages from "../Assets/HeroDevicesImg.svg";
+import HeroSectionCss from "../Styles/HomePage.module.css";
 const HeroSection = () => {
   return (
     <>
@@ -15,7 +13,7 @@ const HeroSection = () => {
           <Typography variant="h3" color="primary">Food app</Typography>
         </Box>
         <Box>
-          <Typography variant="h1" color="primary">
+          <Typography variant="subtitle1" color="primary">
             Why stay hungry when
             <br /> you can order form Bella Onojie
           </Typography>
@@ -28,8 +26,8 @@ const HeroSection = () => {
         <Box
           className={`${HeroSectionCss.flex} ${HeroSectionCss.heroSectionBtnWrapper}`}
         >
-          <HomePageButtons btnName={"PlayStore"} btnVariant={"contained"} />
-          <HomePageButtons btnName={"App store"} btnVariant={"outlined"} />
+          <HomePageButtons btnName={"PlayStore"} btnVariant={"contained"} btnRadius={"30px"}/>
+          <HomePageButtons btnName={"App store"} btnVariant={"outlined"} btnRadius={"30px"}/>
         </Box>
       </Box>
       {/* <Box sx={{zIndex:0,  border:"2px solid black" }}>

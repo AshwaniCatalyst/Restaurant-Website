@@ -10,7 +10,8 @@ const DownloadSection = () => {
         sx={{
           backgroundImage: `url(${DownloadSectionImg})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize:"cover",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
           height: "60vh",
           color:"white",
           display:"flex",
@@ -24,9 +25,9 @@ const DownloadSection = () => {
         <Typography variant="h4" color="primary">
           Available on your favorite store. Start your premium experience now
         </Typography>
-        <Box sx={{mt:5}}>
-            <HomePageButtons btnName={"Playstore"} btnVariant={"contained"} />
-            <HomePageButtons btnName={"Playstore"} btnVariant={"outlined"} />
+        <Box sx={{mt:5, display:"inherit", gap:"2rem"}}>
+            <HomePageButtons btnName={"Playstore"} btnVariant={"contained"} btnRadius={"10px"}/>
+            <HomePageButtons btnName={"Playstore"} btnVariant={"outlined"} btnRadius={"10px"}/>
         </Box>
       </Box>
     </>
